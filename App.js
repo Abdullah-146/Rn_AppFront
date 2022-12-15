@@ -66,7 +66,7 @@ function TabNavigator() {
       <Tab.Screen name="Home" component={Dashboard} />
       <Tab.Screen name="Order" component={Orders} />
       <Tab.Screen name="graph" component={FindTrips} />
-      <Tab.Screen name="PI" component={Requests} />
+      <Tab.Screen name="PI" component={OrderDetails} />
     </Tab.Navigator>
   );
 }
