@@ -21,10 +21,6 @@ import FindTrips from "./Pages/FindTrips";
 const Stack = createStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
 
-const Home = () => {
-  return <Text style={{ paddingTop: 30 }}>HY World</Text>;
-};
-
 // tab navigation in
 function TabNavigator() {
   return (
@@ -66,7 +62,7 @@ function TabNavigator() {
       <Tab.Screen name="Home" component={Dashboard} />
       <Tab.Screen name="Order" component={Orders} />
       <Tab.Screen name="graph" component={FindTrips} />
-      <Tab.Screen name="PI" component={OrderDetails} />
+      <Tab.Screen name="PI" component={TravelDetails} />
     </Tab.Navigator>
   );
 }

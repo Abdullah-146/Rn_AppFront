@@ -7,6 +7,7 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import CustomInput from "../Components/CustomInput";
 import { Foundation } from "@expo/vector-icons";
 import Button from "../Components/Button";
+import FlightComponent from "../Components/Newflightcomponent";
 
 const TravelDetails = () => {
   const [person, setPerson] = useState({
@@ -166,7 +167,7 @@ const TravelDetails = () => {
               </MyText>
             </View>
           </View>
-          {/* YOUR COMPONENET GOES HERE */}
+          <FlightComponent />
         </View>
 
         {/* Bidding View */}
