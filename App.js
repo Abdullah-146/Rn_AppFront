@@ -2,6 +2,7 @@ import "react-native-gesture-handler";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import Dashboard from "./Pages/Dashboard";
+import TravelDetails from "./Pages/TravelDetails";
 // navigation
 
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
@@ -9,6 +10,7 @@ import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
 
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
+import OrderDetails from "./Pages/OrderDetails";
 
 const Stack = createStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
@@ -63,14 +65,16 @@ function TabNavigator() {
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator
-        initialRouteName="WelcomeSign"
-        screenOptions={{ headerShown: false }}
-      >
-        <Stack.Screen name="WelcomeSign" component={TabNavigator} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    // <NavigationContainer>
+    //   <Stack.Navigator
+    //     initialRouteName="WelcomeSign"
+    //     screenOptions={{ headerShown: false }}
+    //   >
+    //     <Stack.Screen name="WelcomeSign" component={TabNavigator} />
+    //   </Stack.Navigator>
+    // </NavigationContainer>
+    // <TravelDetails />
+    <OrderDetails />
   );
 }
 

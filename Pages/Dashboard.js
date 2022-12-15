@@ -30,6 +30,10 @@ const Dashboard = () => {
     alert("Choosed option " + option);
   };
 
+  const headerClick = (action)=>{
+    alert("Action : "+action+" will be performed")
+  }
+
   return (
     <View style={styles.container}>
       <Header
@@ -37,6 +41,8 @@ const Dashboard = () => {
         image={person.image}
         name={person.name}
         greeting={"Good Morning"}
+        imageDisplay={true}
+        handleClick={headerClick}
       />
 
       <MyText
