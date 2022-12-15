@@ -2,7 +2,11 @@ import "react-native-gesture-handler";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import Dashboard from "./Pages/Dashboard";
+
 import Orders from "./Pages/Orders";
+
+import TravelDetails from "./Pages/TravelDetails";
+
 // navigation
 
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
@@ -10,6 +14,8 @@ import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
 
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
+import OrderDetails from "./Pages/OrderDetails";
+import FindTrips from "./Pages/FindTrips";
 
 const Stack = createStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
@@ -58,6 +64,7 @@ function TabNavigator() {
     >
       <Tab.Screen name="Home" component={Dashboard} />
       <Tab.Screen name="Order" component={Orders} />
+      <Tab.Screen name="graph" component={FindTrips} />
     </Tab.Navigator>
   );
 }

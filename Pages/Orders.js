@@ -12,6 +12,10 @@ const Orders = () => {
 
   const [title, settitle] = useState("In progress");
 
+  const headerClick = (action) => {
+    alert("Action : " + action + " will be performed");
+  };
+
   return (
     <View style={styles.container}>
       <Header
@@ -19,6 +23,8 @@ const Orders = () => {
         image={person.image}
         name={person.name}
         greeting={"Good Morning"}
+        text="Orders"
+        handleClick={headerClick}
       />
       <View style={{ flexDirection: "row", marginTop: 8 }}>
         {/* 1 All*/}
@@ -108,5 +114,7 @@ export default Orders;
 const styles = StyleSheet.create({
   container: {
     paddingTop: 40,
+    flex: 1,
+    backgroundColor: "#fff",
   },
 });
