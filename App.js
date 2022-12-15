@@ -6,6 +6,7 @@ import Dashboard from "./Pages/Dashboard";
 import Orders from "./Pages/Orders";
 
 import TravelDetails from "./Pages/TravelDetails";
+import Requests from "./Pages/Requests";
 
 // navigation
 
@@ -65,6 +66,7 @@ function TabNavigator() {
       <Tab.Screen name="Home" component={Dashboard} />
       <Tab.Screen name="Order" component={Orders} />
       <Tab.Screen name="graph" component={FindTrips} />
+      <Tab.Screen name="PI" component={Requests} />
     </Tab.Navigator>
   );
 }
