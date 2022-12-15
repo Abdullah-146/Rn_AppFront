@@ -2,6 +2,7 @@ import "react-native-gesture-handler";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import Dashboard from "./Pages/Dashboard";
+import Orders from "./Pages/Orders";
 // navigation
 
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
@@ -22,32 +23,32 @@ function TabNavigator() {
   return (
     <Tab.Navigator
       initialRouteName="Home"
-      activeColor="#f0edf6"
-      inactiveColor="#3e2465"
-      barStyle={{ backgroundColor: "#222222" }}
+      // activeColor="#FFFFFF"
+      // inactiveColor="#FFFFFF"
+      barStyle={{ backgroundColor: "#FFFFFF" }}
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, size, color }) => {
           let iconName;
-          if (route.name === "Schedule") {
+          if (route.name === "Order") {
             iconName = "th-large";
             size = focused ? 23 : 22;
-            color = focused ? "#C38BFF" : "#AFAFAF";
+            color = focused ? "#161616" : "#16161642";
           } else if (route.name === "Home") {
             iconName = "home";
             size = focused ? 23 : 22;
-            color = focused ? "#C38BFF" : "#AFAFAF";
+            color = focused ? "#161616" : "#16161642";
           } else if (route.name === "Chats") {
             iconName = "comment-dots";
             size = focused ? 23 : 22;
-            color = focused ? "#C38BFF" : "#AFAFAF";
+            color = focused ? "#161616" : "#16161642";
           } else if (route.name === "PI") {
             iconName = "user-circle";
             size = focused ? 23 : 22;
-            color = focused ? "#C38BFF" : "#AFAFAF";
+            color = focused ? "#161616" : "#16161642";
           } else if (route.name === "graph") {
             iconName = "mobile";
             size = focused ? 23 : 22;
-            color = focused ? "#C38BFF" : "#AFAFAF";
+            color = focused ? "#161616" : "#16161642";
           }
 
           return <FontAwesome5 name={iconName} size={size} color={color} />;
@@ -56,6 +57,7 @@ function TabNavigator() {
       })}
     >
       <Tab.Screen name="Home" component={Dashboard} />
+      <Tab.Screen name="Order" component={Orders} />
     </Tab.Navigator>
   );
 }
