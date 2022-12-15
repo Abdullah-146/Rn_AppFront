@@ -33,9 +33,12 @@ const OrderDetails = () => {
           <ScrollView>
             {/* Person Details */}
             <View style={{ marginTop: 30, paddingHorizontal: 20 }}>
-              <MyText style={{ fontWeight: "500", fontSize: 13, lineheight: 19.5 }}>
-                Person Details
-              </MyText>
+              <View style={{flexDirection:"row",alignItems:"center",justifyContent:"space-between"}}>
+                <MyText style={{ fontWeight: "500", fontSize: 13, lineheight: 19.5 }}>
+                    Person Details
+                </MyText>
+                {/* PUT TAGS CODE HERE */}
+              </View>
               <View
                 style={{
                   marginTop: 15,
