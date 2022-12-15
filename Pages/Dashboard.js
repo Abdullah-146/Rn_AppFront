@@ -1,6 +1,6 @@
 import { FlatList, ScrollView, StyleSheet, Text, View } from "react-native";
 import React, { useState } from "react";
-import Header from "../Components/Header";
+import Header from "../Components/Hader";
 import MyText from "../Components/MyText";
 import DashboardItem from "../Components/DashboardItem";
 // import Globe from '../assets/images/Globe.png'
@@ -26,9 +26,9 @@ const Dashboard = () => {
     { image: require("../assets/images/History.png"), text: "History" },
   ];
 
-  const menuClick = (option)=>{
-    alert("Choosed option "+option);
-  }
+  const menuClick = (option) => {
+    alert("Choosed option " + option);
+  };
 
   return (
     <View style={styles.container}>
@@ -51,31 +51,30 @@ const Dashboard = () => {
         Dashboard
       </MyText>
 
-        <View
-          style={{
-            flex: 1,
-            flexDirection: "row",
-            flexWrap: "wrap",
-            justifyContent:"center",
-          }}
-        >
-          {menu.map(({ image, text }, index) => (
-            <DashboardItem
-              key={text}
-              style={{
-                marginVertical: 10,
-                width: "45%",
-                minWidth: "45%",
-                maxWidth: "45%",
-                marginRight:index%2===0?11:0
-                
+      <View
+        style={{
+          flex: 1,
+          flexDirection: "row",
+          flexWrap: "wrap",
+          justifyContent: "center",
+        }}
+      >
+        {menu.map(({ image, text }, index) => (
+          <DashboardItem
+            key={text}
+            style={{
+              marginVertical: 10,
+              width: "45%",
+              minWidth: "45%",
+              maxWidth: "45%",
+              marginRight: index % 2 === 0 ? 11 : 0,
             }}
-              handleClick={menuClick}
-              image={image}
-              text={text}
-            />
-          ))}
-        </View>
+            handleClick={menuClick}
+            image={image}
+            text={text}
+          />
+        ))}
+      </View>
     </View>
   );
 };

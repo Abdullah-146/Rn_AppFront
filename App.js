@@ -1,7 +1,7 @@
 import "react-native-gesture-handler";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
-// import Dashboard from "./Pages/Dashboard";
+import Dashboard from "./Pages/Dashboard";
 // navigation
 
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
@@ -55,7 +55,7 @@ function TabNavigator() {
         tabBarLabel: false,
       })}
     >
-      <Tab.Screen name="Home" component={Home} />
+      <Tab.Screen name="Home" component={Dashboard} />
     </Tab.Navigator>
   );
 }
